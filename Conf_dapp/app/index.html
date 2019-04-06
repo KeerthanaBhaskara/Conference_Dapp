@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Conference DApp </title>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel= 'stylesheet' type='text/css'>
+
+ <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+
+ <link rel="stylesheet" type="text/css" href="./bootstrap.min.css">
+
+ <link rel="stylesheet" type="text/css" href="./app.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="./app.js"></script>
+</head>
+<body data-spy="scroll" data-target=".navbar">
+<div class="jumbotron" id="jt">
+<h1> Conference DApp </h1>
+</div>
+<div class="scrolls">
+<!--<nav class="n navbar navbar-inverse ">-->
+<table width="100%" >
+	<tr>
+	<td><a href="#section1">Buy Single Ticket</a></td>
+	<td><a href="#section2">Buy Multiple Tickets</a></td>
+	<td><a href="#section3">Refund Ticket</a></td>
+	<td><a href="#section4">Destroy Contract</a></td>
+</tr>
+<!--</nav>-->
+</table>
+
+</div>
+<div class="top">
+
+<nav class="navbar navbar-inverse ">
+<div class= "section">
+<div class= "navbar-header">
+<div class= "left nav navbar-nav navbar-left" > Contract deployed at: <div id= "confAddress"></div></div>
+<div class= "middle nav navbar-nav" > Contract Balance: <div id= "confBalance" > 0 </div></div>
+<div class= "middle nav navbar-nav" > Organizer Balance: <div id= "orgBalance" > 0 </div></div>
+<div class= "right nav navbar-nav navbar-right" > Speaker Balance: <div id= "speakerBalance"> 0 </div></div>
+</div>
+<div class= "clear" ></div>
+</div>
+</nav>
+
+
+<div class= "section">
+Organizer: <input type= "text" id= "confOrganizer" readonly />
+</div>
+<div class= "section">
+Quota: <input type= "text" id= "confQuota"/>
+<button id= "changeQuota" class="btn btn-primary"> Change Quota </button>
+<span id= "changeQuotaResult"></span>
+</div>
+<div class= "section" >
+Registrants: <span id= "numRegistrants"> 0 </span>
+</div>
+</div>
+ 
+
+<div class="row">
+<div class= "section container-fluid odd" id="section1">
+<h2> Buy a Ticket </h2><br>
+Ticket Price: <input type= "text" id= "ticketPrice" value= "1.00" readonly /><br><br>Buyer Address: <input type= "text" id= "buyerAddress"/><br><br>
+<button id= "buyTicket" class="btn btn-primary"> Buy Ticket </button><br><br>
+
+<span id= "buyTicketResult" ></span>
+</div>
+
+ <hr class="hr_type">
+<div class="section container-fluid even" id="section2">
+<h2> Buy Multiple Tickets </h2><br><br>
+Ticket Price: <input type="text" id= "ticketPrice" value= "1.00" readonly /><br><br>
+Number of Tickets: <input type=​"text"​ id= "ticketsCount" value="1"/><br><br>
+Buyer Address: <input type="text" id="mbuyerAddress"/><br><br>
+<button id="buyTickets" class="btn btn-primary"> Buy Tickets </button><br><br>
+
+<span id= "buyTicketsResult" ></span>
+</div>
+
+ <hr class="hr_type">
+<div class= "section container-fluid odd"id="section3" >
+<h2> Refund a Ticket </h2><br><br>
+Ticket Price: <input type= "text" id= "ticketPrice" value= "1.00" readonly /><br><br>
+Buyer Address: <input type= "text" id= "refBuyerAddress"/><br><br>
+<button id= "refundTicket" class="btn btn-primary"> Refund Ticket </button><br><br>
+
+<span id= "refundTicketResult" ></span>
+</div>
+
+ <hr class="hr_type">
+<div class= "section container-fluid even" id="section4">
+<h2> Destroy Contract <span id="sub"> (Speaker will get 80% of contract Balance, organiser will get 20%) </span></h2><br><br>
+Speaker Address: <input type= "text" id= "speakerAddress" readonly /><br><br>
+<button​ id= "destroyContract" class="btn btn-primary"> Destroy Contract </button><br><br>
+<span id= "destroyContractResult" ></span>
+</div>
+ <hr class="hr_type">
+
+
+</body>
+</html>
